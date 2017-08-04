@@ -20,5 +20,8 @@ RUN git clone https://github.com/facebookresearch/fastText.git /tmp/fastText && 
   cd / && \
   make
 
-WORKDIR /
+COPY examples/classification.sh /root/
+COPY examples/classification-data.sh /root/
+
+WORKDIR /root
 CMD ["./fasttext", "--allow-root"]
