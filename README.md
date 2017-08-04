@@ -10,7 +10,7 @@ The quickest way to see the fastText classification tutorial with fastText-docke
 ```
 docker pull hephaex/fasttext-docker
 mkdir -p /tmp/data && mkdir -p /tmp/result
-docker run --rm -v /tmp/data:/data -v /tmp/result:/result -it hephaex/fasttext-docker ./classification.sh
+docker run --rm -v /tmp/data:/data -v /tmp/result:/result -it hephaex/fasttext ./classification.sh
 ```
 
 ## Using Devel
