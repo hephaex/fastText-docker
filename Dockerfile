@@ -16,12 +16,14 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/facebookresearch/fastText.git /tmp/fastText && \
   rm -rf /tmp/fastText/.git* && \
-  mv /tmp/fastText/* / && \
-  cd / && \
+  mv /tmp/fastText/* /root && \
+  cd /root && \
   make
 
 COPY examples/classification.sh /root/
+
 COPY examples/classification-data.sh /root/
 
 WORKDIR /root
+
 CMD ["./fasttext", "--allow-root"]
