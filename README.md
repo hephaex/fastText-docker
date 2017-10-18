@@ -8,12 +8,12 @@ FastText is an open-source, free, lightweight library that allows users to learn
 
 The quickest way to see the fastText classification tutorial with fastText-docker is:
 ```
-docker pull hephaex/fasttext-docker
+docker pull hephaex/fasttext
 mkdir -p /tmp/data && mkdir -p /tmp/result
-docker run --rm -v /tmp/data:/data -v /tmp/result:/result -it hephaex/fasttext ./classification.sh
+docker run --rm -v /tmp/data:/data -v /tmp/result:/result -it hephaex/fasttext ./example-train.sh
 ```
 
-## Using Devel
+## Using Develop
 The development container is meant to be interactive, so the best way to use it is probably with a mounted volume and bash.
 ```
 $ mkdir -p /tmp/data && mkdir -p /tmp/result

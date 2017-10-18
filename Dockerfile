@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+
 MAINTAINER Mario Cho <hephaex@gmail.com>
 
 RUN apt-get update && apt-get install -y \
@@ -20,9 +21,10 @@ RUN git clone https://github.com/facebookresearch/fastText.git /tmp/fastText && 
   cd /root && \
   make
 
-COPY examples/classification.sh /root/
+COPY example-train.sh /root/
 
-COPY examples/classification-data.sh /root/
+COPY data /data
+COPY result /result
 
 WORKDIR /root
 
