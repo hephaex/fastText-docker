@@ -22,9 +22,12 @@ RUN git clone https://github.com/facebookresearch/fastText.git /tmp/fastText && 
   make
 
 COPY example-train.sh /root/
-
+COPY train.sh /root/
 COPY data /data
 COPY result /result
+
+RUN chown -R root:root /data /result
+RUN chmod -R 700 /data /result
 
 WORKDIR /root
 
