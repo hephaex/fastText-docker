@@ -1,5 +1,4 @@
-FROM ubuntu:16.04
-
+FROM hephaex/ubuntu
 MAINTAINER Mario Cho <hephaex@gmail.com>
 
 RUN apt-get update && apt-get install -y \
@@ -9,10 +8,9 @@ RUN apt-get update && apt-get install -y \
         python-dev \
         unzip \
         python-numpy \
-        python-scipy \
-        && \
+        python-scipy && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* \
+    rm -rf /var/lib/apt/lists/* && \
     rm -rf /var/cache/apk/*
 
 RUN git clone https://github.com/facebookresearch/fastText.git /tmp/fastText && \
